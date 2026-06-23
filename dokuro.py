@@ -34,13 +34,13 @@ class Client(discord.Client):
         if message.author == self.user:
             return
 
-        mod_msg = re.sub(r'[^a-z]', '', message.content.lower())
+        mod_msg = "".join(re.findall(r'[a-z]', message.content.lower()))
         if 'sku' in mod_msg:
             if mod_msg == 'sku':
                 await message.channel.send('https://en.wikipedia.org/wiki/Stock_keeping_unit')
             elif mod_msg == 'skull':
                 await message.channel.send('https://youtu.be/HejoBEPCDCk')
-            else:
+            elif mod_msg == 'skul':
                 await message.channel.send('💀')
 
 
