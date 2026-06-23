@@ -42,6 +42,8 @@ class Client(discord.Client):
                 await message.channel.send('https://youtu.be/HejoBEPCDCk')
             elif mod_msg == 'skul':
                 await message.channel.send('💀')
+        elif 'mambo' in mod_msg:
+            await message.channel.send('<:mambo:1490734126142193824>')
 
 
 bot = Client()
